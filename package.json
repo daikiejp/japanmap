@@ -1,0 +1,50 @@
+{
+  "name": "japanmap",
+  "version": "1.0.1",
+  "description": "A React component for rendering an interactive map of Japan",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && rollup -c",
+    "dev": "rollup -c -w",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "rollup": "^3.0.0",
+    "rollup-plugin-banner2": "^1.3.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daikiejp/japanmap.git"
+  },
+  "author": "Danny Davila",
+  "license": "ISC",
+  "keywords": [
+    "日本地図",
+    "日本",
+    "地図",
+    "japanmap",
+    "Map of Japan",
+    "react japan map"
+  ]
+}
