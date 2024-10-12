@@ -1,28 +1,28 @@
 # JapanMap
 
-ENGLISH | [日本語](README_ja.md)
+[ENGLISH](README.md) | 日本語
 
-A React component for rendering an interactive map of Japan, with customizable prefecture colors, hover effects, and tooltips.
+ここでは、日本のインタラクティブな地図をレンダリングするための React コンポーネントについて説明しています。都道府県の色、ホバーエフェクト、ツールチップをカスタマイズできます。
 
 ![Japanmap](demo.gif)
 
-## Features
+## 機能
 
-- Display a map of Japan with all prefectures.
-- Language support for Japanese and English prefecture names.
-- Customize the colors of each prefecture.
-- Show tooltips with custom descriptions when hovering over prefectures.
-- Supports dynamic data loading from JSON.
+- すべての都道府県を含む日本の地図を表示します。
+- 日本語と英語の都道府県名をサポートしています。
+- 各都道府県の色をカスタマイズできます。
+- 都道府県にホバーすると、カスタム説明を含むツールチップを表示します。
+- JSON からの動的データ読み込みをサポートしています。
 
-## Installation
+## インストール
 
-Install the library using npm:
+npm を使用してライブラリをインストールします:
 
 ```bash
 npm install japanmap
 ```
 
-or...
+または...
 
 <details>
 <summary><strong>pnpm</strong></summary>
@@ -51,9 +51,9 @@ bun add japanmap
 
 </details>
 
-## Usage
+## 使用方法
 
-Import the JapanMap component and use it in your React application:
+JapanMap コンポーネントをインポートし、React アプリケーションで使用します:
 
 ```tsx
 import React from 'react';
@@ -62,7 +62,7 @@ import JapanMap from 'japanmap';
 const App = () => {
   return (
     <div>
-      <h1>Interactive Japan Map</h1>
+      <h1>インタラクティブ日本地図</h1>
       <JapanMap
         lang="en"
         strokeColor="#000"
@@ -78,9 +78,9 @@ const App = () => {
 export default App;
 ```
 
-## Extends prefectures data (descriptions and fill colors)
+## 都道府県データの拡張（説明と塗りつぶし色）
 
-You can extend the default prefectures data by adding your own descriptions and fill colors with your own JSON file.
+独自の JSON ファイルを使用して、自分の説明と塗りつぶし色を追加することで、デフォルトの都道府県データを拡張できます。
 
 ```tsx
 import React from 'react';
@@ -90,7 +90,7 @@ import prefecturesData from './your/path/prefecturesdata.json';
 const App = () => {
   return (
     <div>
-      <h1>Interactive Japan Map</h1>
+      <h1>インタラクティブ日本地図</h1>
       <JapanMap
         data={prefecturesData}
         lang="en"
@@ -107,9 +107,9 @@ const App = () => {
 export default App;
 ```
 
-## Props
+## プロパティ
 
-The `JapanMap` component accepts the following properties (all are optional):
+JapanMap コンポーネントは、次のプロパティを受け入れます（すべてオプションです）：
 
 | Property      | Type                                                       | Description                                                          |
 | ------------- | ---------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -120,39 +120,40 @@ The `JapanMap` component accepts the following properties (all are optional):
 | `bgColor`     | `string`                                                   | Background color of the map.                                         |
 | `size`        | `string`                                                   | Width of the map component.                                          |
 
-## Prefecture Data Format
+## 都道府県データ形式
 
-The data prop expects an array of objects with the following structure:
+data プロパティは、次の構造を持つオブジェクトの配列を期待します：
 
 ```json
 [
   {
     "id": "JP01",
-    "description": "Hokkaido is the northernmost prefecture of Japan.",
+    "description": "北海道は日本最北の都道府県です。",
     "fill": "#88C0D0"
   },
   {
     "id": "JP02",
-    "description": "Aomori is known for its apple production.",
+    "description": "青森県はりんごの生産で知られています。",
     "fill": "#BF616A"
   },
   ...
 ]
 ```
 
-- id: A unique identifier for each prefecture. Using the ISO 3166-2:JP standard. (JP01...JP47)
-- description: A string that will be shown in the tooltip when hovering over the prefecture.
-- fill: The default fill color for each prefecture.
+- id: 各都道府県の一意の識別子。ISO 3166-2
+  標準を使用しています。（JP01...JP47）
+- description: 都道府県にホバーしたときにツールチップに表示される文字列。
+- fill: 各都道府県のデフォルトの塗りつぶし色。
 
-## Prefectures Codes
+# 都道府県コード
 
-Please select the corresponding IDs for each prefecture from the table below. These IDs will be used to add entries to the JSON file and will help you identify each prefecture for labeling or changing their colors on the interactive map.
+以下の表から各都道府県に対応する ID を選択してください。これらの ID は JSON ファイルにエントリを追加するために使用され、インタラクティブな地図で各都道府県のラベル付けや色の変更を識別するのに役立ちます。
 
 <table>
     <thead>
         <tr>
             <th>ID</th>
-            <th>Prefecture</th>
+            <th>都道府県</th>
             <th>ISO 3166-2:JP</th>
         </tr>
     </thead>
@@ -396,51 +397,51 @@ Please select the corresponding IDs for each prefecture from the table below. Th
 
 </table>
 
-## Development
+## 開発
 
-To build and run the project locally:
+プロジェクトをローカルでビルドして実行するには：
 
-1. Clone the repository:
+1. リポジトリをクローンします：
 
 ```bash
 git clone https://github.com/daikiejp/japanmap.git
 cd japanmap
 ```
 
-2. Install dependencies:
+2. 依存関係をインストールします：
 
 ```bash
 npm install
 ```
 
-3. Start the development server:
+3. 開発サーバーを起動します：
 
 ```bash
 npm run dev
 ```
 
-## Contributing
+## コントリビューション
 
-Contributions are welcome! Please follow these steps:
+貢献を歓迎します！以下の手順に従ってください：
 
-1. Fork the repository.
-2. Create a new branch (git checkout -b feature/your-feature).
-3. Commit your changes (git commit -m 'Add a new feature').
-4. Push to the branch (git push origin feature/your-feature).
-5. Create a pull request.
+1. リポジトリをフォークします。
+2. 新しいブランチを作成します（git checkout -b feature/your-feature）。
+3. 変更をコミットします（git commit -m 'Add a new feature'）。
+4. ブランチにプッシュします（git push origin feature/your-feature）。
+5. プルリクエストを作成します
 
-## Author
+## 著者
 
 👤 **Danny Davila**
 
-- Website: [https://daikie.jp](daikie.jp)
-- X (formely Twitter): [@daikiejp](https://twitter.com/daikiejp)
+- ウェブサイト: [https://daikie.jp](daikie.jp)
+- X (旧 Twitter): [@daikiejp](https://twitter.com/daikiejp)
 - Github: [@daikiejp](https://github.com/daikiejp)
 
-## Credits
+## クレジット
 
-- Map data sourced from [Simple Maps](https://simplemaps.com/resources/svg-license).
+地図データは[Simple Maps](https://simplemaps.com/resources/svg-license)から取得しました。
 
-## License
+## ライセンス
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+このプロジェクトは MIT ライセンスの下でライセンスされています - 詳細は LICENSE ファイルを参照してください。

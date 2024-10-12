@@ -1,6 +1,6 @@
 {
   "name": "japanmap",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "A React component for rendering an interactive map of Japan",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -38,7 +38,7 @@
     "url": "https://github.com/daikiejp/japanmap.git"
   },
   "author": "Danny Davila",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "日本地図",
     "日本",
